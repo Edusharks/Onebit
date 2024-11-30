@@ -723,7 +723,6 @@ namespace OLED12864_I2C {
     // I2C_Oled //
     ////////////////////
 
-    {
         let font: number[] = [];
         font[0] = 0x0022d422;
         font[1] = 0x0022d422;
@@ -1187,7 +1186,7 @@ namespace OLED12864_I2C {
             clear();
             _ZOOM = 1;
         }
-    }
+    
 
 
 }
