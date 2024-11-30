@@ -27,7 +27,7 @@
     "numberOfPins": 4,
     "instantiation": {
       "kind": "function",
-      "fullyQualifiedName": "Onebit.init",
+      "fullyQualifiedName": "Onebit_block.init",
       "argumentRoles": [{
                     "pinInstantiationIdx": 0
                 }]
