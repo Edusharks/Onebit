@@ -27,7 +27,7 @@
     "numberOfPins": 4,
     "instantiation": {
       "kind": "function",
-      "fullyQualifiedName": "OLED12864_I2C.init",
+      "fullyQualifiedName": "Onebit.init",
       "argumentRoles": [{
                     "pinInstantiationIdx": 0
                 }]
