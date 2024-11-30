@@ -30,7 +30,6 @@
       "fullyQualifiedName": "OLED12864_I2C.init",
       "argumentRoles": [{
                     "pinInstantiationIdx": 0
-                    "pinInstantiationIdx": 1
                 }]
     },
     "pinDefinitions": [
