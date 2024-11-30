@@ -26,7 +26,7 @@
     },
     "numberOfPins": 4,
     "instantiation": {
-      "kind": "function",
+      "kind": "export function",
       "fullyQualifiedName": "OLED12864_I2C.initializeUltrasonicPins",
       "argumentRoles": [{
                     "pinInstantiationIdx": 0
