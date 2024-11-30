@@ -10,7 +10,8 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "Onebit.ts"
+        "Onebit.ts",
+        "parts/OLED.svg"
     ],
     "testFiles": [
         "test.ts"
