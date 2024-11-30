@@ -5,7 +5,7 @@
  */
 
 //% weight=20 color=#0855AA icon="O" block="OLED12864_I2C"
-namespace OLED12864_I2C {
+namespace Onebit {
   let font: number[] = [];
   font[0] = 0x0022d422;
   font[1] = 0x0022d422;
