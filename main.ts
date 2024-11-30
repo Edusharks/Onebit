@@ -1,3 +1,1 @@
-basic.forever(function () {
-	
-})
+Onebit.init(60)
