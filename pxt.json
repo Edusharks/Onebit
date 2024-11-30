@@ -1,5 +1,5 @@
 {
-    "name": "Onebit",
+    "name": "onebit",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -26,5 +26,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
