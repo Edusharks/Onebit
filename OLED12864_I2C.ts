@@ -717,7 +717,7 @@ namespace OLED12864_I2C {
                 handler(); // Run the provided handler code when the distance is within range
             }
         );
-    }
+    
 
     ////////////////////
     // I2C_Oled //
@@ -1187,6 +1187,6 @@ namespace OLED12864_I2C {
             _ZOOM = 1;
         }
     
+    }
 
-
-}
+  }
