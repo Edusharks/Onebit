@@ -1,5 +1,5 @@
 {
-  "Onebit": {
+  "OLED12864_I2C": {
     "visual": {
       "image": "parts/Ultrasonic.svg",
       "width": 176,
