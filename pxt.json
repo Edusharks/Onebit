@@ -10,10 +10,10 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "Onebit.ts",
         "pxtparts.json",
         "parts/OLED.svg",
-        "parts/Ultrasonic.svg"
+        "parts/Ultrasonic.svg",
+        "OLED12864_I2C.ts"
     ],
     "testFiles": [
         "test.ts"
