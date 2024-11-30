@@ -12,7 +12,8 @@
         "README.md",
         "Onebit.ts",
         "pxtparts.json",
-        "parts/OLED.svg"
+        "parts/OLED.svg",
+        "parts/Ultrasonic.svg"
     ],
     "testFiles": [
         "test.ts"
