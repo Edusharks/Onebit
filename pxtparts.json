@@ -30,6 +30,7 @@
       "fullyQualifiedName": "Onebit.init",
       "argumentRoles": [{
                     "pinInstantiationIdx": 0
+                    "pinInstantiationIdx": 1
                 }]
     },
     "pinDefinitions": [
