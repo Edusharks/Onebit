@@ -1,7 +1,7 @@
 /**
  * Custom blocks for One:Bit
  */
-//%  weight=100 color=#E3D114 icon="\uf1ba" block="One:Bit"
+//%  weight=100 color=#E3D114 icon="\uf1ba" block="OLED12864_I2C"
 
 namespace OLED12864_I2C {
 
