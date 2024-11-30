@@ -1,268 +1,451 @@
-/**
- * Custom blocks for One:Bit
- */
-//%  weight=100 color=#E3D114 icon="\uf1ba" block="One:Bit"
+//% weight=20 color=#0855AA icon="O" block="OLED12864_I2C"
+namespace Onebit {
+  let font: number[] = [];
+  font[0] = 0x0022d422;
+  font[1] = 0x0022d422;
+  font[2] = 0x0022d422;
+  font[3] = 0x0022d422;
+  font[4] = 0x0022d422;
+  font[5] = 0x0022d422;
+  font[6] = 0x0022d422;
+  font[7] = 0x0022d422;
+  font[8] = 0x0022d422;
+  font[9] = 0x0022d422;
+  font[10] = 0x0022d422;
+  font[11] = 0x0022d422;
+  font[12] = 0x0022d422;
+  font[13] = 0x0022d422;
+  font[14] = 0x0022d422;
+  font[15] = 0x0022d422;
+  font[16] = 0x0022d422;
+  font[17] = 0x0022d422;
+  font[18] = 0x0022d422;
+  font[19] = 0x0022d422;
+  font[20] = 0x0022d422;
+  font[21] = 0x0022d422;
+  font[22] = 0x0022d422;
+  font[23] = 0x0022d422;
+  font[24] = 0x0022d422;
+  font[25] = 0x0022d422;
+  font[26] = 0x0022d422;
+  font[27] = 0x0022d422;
+  font[28] = 0x0022d422;
+  font[29] = 0x0022d422;
+  font[30] = 0x0022d422;
+  font[31] = 0x0022d422;
+  font[32] = 0x00000000;
+  font[33] = 0x000002e0;
+  font[34] = 0x00018060;
+  font[35] = 0x00afabea;
+  font[36] = 0x00aed6ea;
+  font[37] = 0x01991133;
+  font[38] = 0x010556aa;
+  font[39] = 0x00000060;
+  font[40] = 0x000045c0;
+  font[41] = 0x00003a20;
+  font[42] = 0x00051140;
+  font[43] = 0x00023880;
+  font[44] = 0x00002200;
+  font[45] = 0x00021080;
+  font[46] = 0x00000100;
+  font[47] = 0x00111110;
+  font[48] = 0x0007462e;
+  font[49] = 0x00087e40;
+  font[50] = 0x000956b9;
+  font[51] = 0x0005d629;
+  font[52] = 0x008fa54c;
+  font[53] = 0x009ad6b7;
+  font[54] = 0x008ada88;
+  font[55] = 0x00119531;
+  font[56] = 0x00aad6aa;
+  font[57] = 0x0022b6a2;
+  font[58] = 0x00000140;
+  font[59] = 0x00002a00;
+  font[60] = 0x0008a880;
+  font[61] = 0x00052940;
+  font[62] = 0x00022a20;
+  font[63] = 0x0022d422;
+  font[64] = 0x00e4d62e;
+  font[65] = 0x000f14be;
+  font[66] = 0x000556bf;
+  font[67] = 0x0008c62e;
+  font[68] = 0x0007463f;
+  font[69] = 0x0008d6bf;
+  font[70] = 0x000094bf;
+  font[71] = 0x00cac62e;
+  font[72] = 0x000f909f;
+  font[73] = 0x000047f1;
+  font[74] = 0x0017c629;
+  font[75] = 0x0008a89f;
+  font[76] = 0x0008421f;
+  font[77] = 0x01f1105f;
+  font[78] = 0x01f4105f;
+  font[79] = 0x0007462e;
+  font[80] = 0x000114bf;
+  font[81] = 0x000b6526;
+  font[82] = 0x010514bf;
+  font[83] = 0x0004d6b2;
+  font[84] = 0x0010fc21;
+  font[85] = 0x0007c20f;
+  font[86] = 0x00744107;
+  font[87] = 0x01f4111f;
+  font[88] = 0x000d909b;
+  font[89] = 0x00117041;
+  font[90] = 0x0008ceb9;
+  font[91] = 0x0008c7e0;
+  font[92] = 0x01041041;
+  font[93] = 0x000fc620;
+  font[94] = 0x00010440;
+  font[95] = 0x01084210;
+  font[96] = 0x00000820;
+  font[97] = 0x010f4a4c;
+  font[98] = 0x0004529f;
+  font[99] = 0x00094a4c;
+  font[100] = 0x000fd288;
+  font[101] = 0x000956ae;
+  font[102] = 0x000097c4;
+  font[103] = 0x0007d6a2;
+  font[104] = 0x000c109f;
+  font[105] = 0x000003a0;
+  font[106] = 0x0006c200;
+  font[107] = 0x0008289f;
+  font[108] = 0x000841e0;
+  font[109] = 0x01e1105e;
+  font[110] = 0x000e085e;
+  font[111] = 0x00064a4c;
+  font[112] = 0x0002295e;
+  font[113] = 0x000f2944;
+  font[114] = 0x0001085c;
+  font[115] = 0x00012a90;
+  font[116] = 0x010a51e0;
+  font[117] = 0x010f420e;
+  font[118] = 0x00644106;
+  font[119] = 0x01e8221e;
+  font[120] = 0x00093192;
+  font[121] = 0x00222292;
+  font[122] = 0x00095b52;
+  font[123] = 0x0008fc80;
+  font[124] = 0x000003e0;
+  font[125] = 0x000013f1;
+  font[126] = 0x00841080;
+  font[127] = 0x0022d422;
 
-namespace One_Bit {
+  let _I2CAddr = 0;
+  let _screen = pins.createBuffer(1025);
+  let _buf2 = pins.createBuffer(2);
+  let _buf3 = pins.createBuffer(3);
+  let _buf4 = pins.createBuffer(4);
+  let _ZOOM = 1;
 
+  function cmd1(d: number) {
+    let n = d % 256;
+    pins.i2cWriteNumber(_I2CAddr, n, NumberFormat.UInt16BE);
+  }
 
-    // Define custom enums for digital pins
-    export enum DigitalPinPrime {
-        //% block="P0"
-        P0 = DigitalPin.P0,
-        //% block="P1"
-        P1 = DigitalPin.P1,
-        //% block="P2"
-        P2 = DigitalPin.P2,
-        //% block="P3"
-        P3 = DigitalPin.P3,
-        //% block="P4"
-        P4 = DigitalPin.P4,
-        //% block="P9"
-        P9 = DigitalPin.P9,
-        //% block="P10"
-        P10 = DigitalPin.P10,
-        //% block="P13"
-        P13 = DigitalPin.P13,
-        //% block="P14"
-        P14 = DigitalPin.P14,
-        //% block="P15"
-        P15 = DigitalPin.P15,
-        //% block="P19"
-        P19 = DigitalPin.P19,
-        //% block="P20"
-        P20 = DigitalPin.P20
+  function cmd2(d1: number, d2: number) {
+    _buf3[0] = 0;
+    _buf3[1] = d1;
+    _buf3[2] = d2;
+    pins.i2cWriteBuffer(_I2CAddr, _buf3);
+  }
+
+  function cmd3(d1: number, d2: number, d3: number) {
+    _buf4[0] = 0;
+    _buf4[1] = d1;
+    _buf4[2] = d2;
+    _buf4[3] = d3;
+    pins.i2cWriteBuffer(_I2CAddr, _buf4);
+  }
+
+  function set_pos(col: number = 0, page: number = 0) {
+    cmd1(0xb0 | page); // page number
+    let c = col * (_ZOOM + 1);
+    cmd1(0x00 | c % 16); // lower start column address
+    cmd1(0x10 | (c >> 4)); // upper start column address
+  }
+
+  // clear bit
+  function clrbit(d: number, b: number): number {
+    if (d & (1 << b)) d -= 1 << b;
+    return d;
+  }
+
+  /**
+   * set pixel in OLED
+   * @param x is X alis, eg: 0
+   * @param y is Y alis, eg: 0
+   * @param color is dot color, eg: 1
+   */
+  //% blockId="OLED12864_I2C_PIXEL" block="set pixel at x %x|y %y|color %color"
+  //% weight=70 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function pixel(x: number, y: number, color: number = 1) {
+    let page = y >> 3;
+    let shift_page = y % 8;
+    let ind = x * (_ZOOM + 1) + page * 128 + 1;
+    let b = color
+      ? _screen[ind] | (1 << shift_page)
+      : clrbit(_screen[ind], shift_page);
+    _screen[ind] = b;
+    set_pos(x, page);
+    if (_ZOOM) {
+      _screen[ind + 1] = b;
+      _buf3[0] = 0x40;
+      _buf3[1] = _buf3[2] = b;
+      pins.i2cWriteBuffer(_I2CAddr, _buf3);
+    } else {
+      _buf2[0] = 0x40;
+      _buf2[1] = b;
+      pins.i2cWriteBuffer(_I2CAddr, _buf2);
     }
-    ////////////////////
-    // I2C_Oled //
-    ////////////////////
+  }
 
-    let _I2CAddr = 0x3C; // Default I2C address for OLED
-    let _screen = pins.createBuffer(1025); // Screen buffer
-    _screen[0] = 0x40; // Control byte for data
-
-    // Full 5x7 font for ASCII 32-127 (including lowercase a-z)
-    const font: number[] = [
-        // ASCII 32-127 (printable characters)
-        0x00, 0x00, 0x00, 0x00, 0x00, // Space
-        0x00, 0x00, 0x5F, 0x00, 0x00, // !
-        0x00, 0x03, 0x00, 0x03, 0x00, // "
-        0x14, 0x7F, 0x14, 0x7F, 0x14, // #
-        0x24, 0x2A, 0x7F, 0x2A, 0x12, // $
-        0x23, 0x13, 0x08, 0x64, 0x62, // %
-        0x36, 0x49, 0x55, 0x22, 0x50, // &
-        0x00, 0x05, 0x03, 0x00, 0x00, // '
-        0x00, 0x1C, 0x22, 0x41, 0x00, // (
-        0x00, 0x41, 0x22, 0x1C, 0x00, // )
-        0x14, 0x08, 0x3E, 0x08, 0x14, // *
-        0x08, 0x08, 0x3E, 0x08, 0x08, // +
-        0x00, 0x50, 0x30, 0x00, 0x00, // ,
-        0x08, 0x08, 0x08, 0x08, 0x08, // -
-        0x00, 0x60, 0x60, 0x00, 0x00, // .
-        0x20, 0x10, 0x08, 0x04, 0x02, // /
-        0x3E, 0x51, 0x49, 0x45, 0x3E, // 0
-        0x00, 0x42, 0x7F, 0x40, 0x00, // 1
-        0x42, 0x61, 0x51, 0x49, 0x46, // 2
-        0x21, 0x41, 0x45, 0x4B, 0x31, // 3
-        0x18, 0x14, 0x12, 0x7F, 0x10, // 4
-        0x27, 0x45, 0x45, 0x45, 0x39, // 5
-        0x3C, 0x4A, 0x49, 0x49, 0x30, // 6
-        0x01, 0x71, 0x09, 0x05, 0x03, // 7
-        0x36, 0x49, 0x49, 0x49, 0x36, // 8
-        0x06, 0x49, 0x49, 0x29, 0x1E, // 9
-        0x00, 0x36, 0x36, 0x00, 0x00, // :
-        0x00, 0x56, 0x36, 0x00, 0x00, // ;
-        0x08, 0x14, 0x22, 0x41, 0x00, // <
-        0x14, 0x14, 0x14, 0x14, 0x14, // =
-        0x00, 0x41, 0x22, 0x14, 0x08, // >
-        0x02, 0x01, 0x51, 0x09, 0x06, // ?
-        0x3E, 0x41, 0x5D, 0x55, 0x1E, // @
-        0x7E, 0x11, 0x11, 0x11, 0x7E, // A
-        0x7F, 0x49, 0x49, 0x49, 0x36, // B
-        0x3E, 0x41, 0x41, 0x41, 0x22, // C
-        0x7F, 0x41, 0x41, 0x22, 0x1C, // D
-        0x7F, 0x49, 0x49, 0x49, 0x41, // E
-        0x7F, 0x09, 0x09, 0x09, 0x01, // F
-        0x3E, 0x41, 0x49, 0x49, 0x7A, // G
-        0x7F, 0x08, 0x08, 0x08, 0x7F, // H
-        0x00, 0x41, 0x7F, 0x41, 0x00, // I
-        0x20, 0x40, 0x41, 0x3F, 0x01, // J
-        0x7F, 0x08, 0x14, 0x22, 0x41, // K
-        0x7F, 0x40, 0x40, 0x40, 0x40, // L
-        0x7F, 0x02, 0x0C, 0x02, 0x7F, // M
-        0x7F, 0x04, 0x08, 0x10, 0x7F, // N
-        0x3E, 0x41, 0x41, 0x41, 0x3E, // O
-        0x7F, 0x09, 0x09, 0x09, 0x06, // P
-        0x3E, 0x41, 0x51, 0x21, 0x5E, // Q
-        0x7F, 0x09, 0x19, 0x29, 0x46, // R
-        0x46, 0x49, 0x49, 0x49, 0x31, // S
-        0x01, 0x01, 0x7F, 0x01, 0x01, // T
-        0x3F, 0x40, 0x40, 0x40, 0x3F, // U
-        0x1F, 0x20, 0x40, 0x20, 0x1F, // V
-        0x3F, 0x40, 0x38, 0x40, 0x3F, // W
-        0x63, 0x14, 0x08, 0x14, 0x63, // X
-        0x07, 0x08, 0x70, 0x08, 0x07, // Y
-        0x61, 0x51, 0x49, 0x45, 0x43, // Z
-        0x00, 0x7F, 0x41, 0x41, 0x00, // [
-        0x02, 0x04, 0x08, 0x10, 0x20, // Backslash
-        0x00, 0x41, 0x41, 0x7F, 0x00, // ]
-        0x04, 0x02, 0x01, 0x02, 0x04, // ^
-        0x40, 0x40, 0x40, 0x40, 0x40, // _
-        0x00, 0x03, 0x05, 0x00, 0x00, // `
-        // Lowercase letters a-z (ASCII 97-122)
-        0x3E, 0x51, 0x49, 0x49, 0x3E, // a
-        0x7F, 0x49, 0x49, 0x49, 0x36, // b
-        0x3E, 0x41, 0x41, 0x41, 0x22, // c
-        0x7F, 0x41, 0x41, 0x22, 0x1C, // d
-        0x3E, 0x49, 0x49, 0x49, 0x30, // e
-        0x7F, 0x09, 0x09, 0x09, 0x01, // f
-        0x36, 0x49, 0x49, 0x49, 0x3E, // g
-        0x7F, 0x08, 0x08, 0x08, 0x7F, // h
-        0x00, 0x49, 0x7F, 0x49, 0x00, // i
-        0x20, 0x40, 0x49, 0x3F, 0x01, // j
-        0x7F, 0x08, 0x14, 0x22, 0x41, // k
-        0x00, 0x41, 0x7F, 0x40, 0x00, // l
-        0x7F, 0x02, 0x0C, 0x02, 0x7F, // m
-        0x7F, 0x04, 0x08, 0x10, 0x7F, // n
-        0x3E, 0x41, 0x41, 0x41, 0x3E, // o
-        0x7F, 0x09, 0x09, 0x09, 0x06, // p
-        0x3E, 0x41, 0x51, 0x21, 0x5E, // q
-        0x7F, 0x09, 0x19, 0x29, 0x46, // r
-        0x46, 0x49, 0x49, 0x49, 0x31, // s
-        0x01, 0x01, 0x7F, 0x01, 0x01, // t
-        0x3F, 0x40, 0x40, 0x40, 0x3F, // u
-        0x1F, 0x20, 0x40, 0x20, 0x1F, // v
-        0x3F, 0x40, 0x38, 0x40, 0x3F, // w
-        0x63, 0x14, 0x08, 0x14, 0x63, // x
-        0x07, 0x08, 0x70, 0x08, 0x07, // y
-        0x61, 0x51, 0x49, 0x45, 0x43, // z
-        0x00, 0x41, 0x41, 0x7F, 0x00, // {
-        0x00, 0x00, 0x7F, 0x00, 0x00, // |
-        0x00, 0x7F, 0x41, 0x41, 0x00, // }
-        0x10, 0x20, 0x10, 0x20, 0x10, // ~
-    ];
-
-
-
-    /**
-     * Initializes the OLED display.
-     * @param address I2C address of the OLED, eg: 60
-     */
-    //% blockId="I2C_OLED_INIT" block="initialize OLED at I2C address %address"
-    //% subcategory="I2C OLED"
-    //% weight=100
-    export function init(address: number = 0x3C): void {
-        _I2CAddr = address;
-        _screen.fill(0);
-        const initCommands = [
-            0xAE, // Display off
-            0xD5, 0x80, // Set display clock divide ratio/oscillator frequency
-            0xA8, 0x3F, // Set multiplex ratio (1 to 64)
-            0xD3, 0x00, // Set display offset
-            0x40, // Set start line address
-            0x8D, 0x14, // Enable charge pump
-            0x20, 0x00, // Set memory addressing mode to horizontal
-            0xA1, // Set segment re-map
-            0xC8, // Set COM output scan direction
-            0xDA, 0x12, // Set COM pins hardware configuration
-            0x81, 0xCF, // Set contrast control
-            0xD9, 0xF1, // Set pre-charge period
-            0xDB, 0x40, // Set VCOMH deselect level
-            0xA4, // Entire display ON
-            0xA6, // Set normal display mode
-            0xAF // Display ON
-        ];
-        for (let cmd of initCommands) {
-            cmd1(cmd);
+  /**
+   * show text in OLED
+   * @param x is X alis, eg: 0
+   * @param y is Y alis, eg: 0
+   * @param s is the text will be show, eg: 'Hello!'
+   * @param color is string color, eg: 1
+   */
+  //% blockId="OLED12864_I2C_SHOWSTRING" block="show string at x %x|y %y|text %s|color %color"
+  //% weight=80 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function showString(
+    x: number,
+    y: number,
+    s: string,
+    color: number = 1
+  ) {
+    let col = 0;
+    let p = 0;
+    let ind = 0;
+    for (let n = 0; n < s.length; n++) {
+      p = font[s.charCodeAt(n)];
+      for (let i = 0; i < 5; i++) {
+        col = 0;
+        for (let j = 0; j < 5; j++) {
+          if (p & (1 << (5 * i + j))) col |= 1 << (j + 1);
         }
-        clear();
-        refresh();
+        ind = (x + n) * 5 * (_ZOOM + 1) + y * 128 + i * (_ZOOM + 1) + 1;
+        if (color == 0) col = 255 - col;
+        _screen[ind] = col;
+        if (_ZOOM) _screen[ind + 1] = col;
+      }
     }
+    set_pos(x * 5, y);
+    let ind0 = x * 5 * (_ZOOM + 1) + y * 128;
+    let buf = _screen.slice(ind0, ind + 1);
+    buf[0] = 0x40;
+    pins.i2cWriteBuffer(_I2CAddr, buf);
+  }
 
-    function cmd1(d: number): void {
-        pins.i2cWriteNumber(_I2CAddr, 0x00 | d, NumberFormat.UInt16BE);
-    }
+  /**
+   * show a number in OLED
+   * @param x is X alis, eg: 0
+   * @param y is Y alis, eg: 0
+   * @param num is the number will be show, eg: 12
+   * @param color is number color, eg: 1
+   */
+  //% blockId="OLED12864_I2C_NUMBER" block="show a Number at x %x|y %y|number %num|color %color"
+  //% weight=80 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function showNumber(
+    x: number,
+    y: number,
+    num: number,
+    color: number = 1
+  ) {
+    showString(x, y, num.toString(), color);
+  }
 
-    function set_pos(col: number, page: number): void {
-        cmd1(0xB0 | page); // Set page address
-        cmd1(0x00 | (col & 0x0F)); // Set lower column start address
-        cmd1(0x10 | (col >> 4)); // Set higher column start address
-    }
+  /**
+   * draw a horizontal line
+   * @param x is X alis, eg: 0
+   * @param y is Y alis, eg: 0
+   * @param len is the length of line, eg: 10
+   * @param color is line color, eg: 1
+   */
+  //% blockId="OLED12864_I2C_HLINE" block="draw a horizontal line at x %x|y %y|number %len|color %color"
+  //% weight=71 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function hline(x: number, y: number, len: number, color: number = 1) {
+    for (let i = x; i < x + len; i++) pixel(i, y, color);
+  }
 
-    /**
-     * Clears the OLED display.
-     */
-    //% blockId="I2C_OLED_CLEAR" block="clear OLED"
-    //% subcategory="I2C OLED"
-    //% weight=95
-    export function clear(): void {
-        _screen.fill(0, 1); // Clear screen buffer
-    }
+  /**
+   * draw a vertical line
+   * @param x is X alis, eg: 0
+   * @param y is Y alis, eg: 0
+   * @param len is the length of line, eg: 10
+   * @param color is line color, eg: 1
+   */
+  //% blockId="OLED12864_I2C_VLINE" block="draw a vertical line at x %x|y %y|number %len|color %color"
+  //% weight=72 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function vline(x: number, y: number, len: number, color: number = 1) {
+    for (let i = y; i < y + len; i++) pixel(x, i, color);
+  }
 
-    /**
-     * Refreshes the OLED display with the current buffer.
-     */
-    //% blockId="I2C_OLED_REFRESH" block="refresh OLED"
-    //% subcategory="I2C OLED"
-    //% weight=94
-    export function refresh(): void {
-        for (let i = 0; i < 8; i++) {
-            set_pos(0, i);
-            let buf = _screen.slice(1 + i * 128, 1 + (i + 1) * 128);
-            buf[0] = 0x40; // Control byte for data
-            pins.i2cWriteBuffer(_I2CAddr, buf);
-        }
-    }
+  /**
+   * draw a rectangle
+   * @param x1 is X alis, eg: 0
+   * @param y1 is Y alis, eg: 0
+   * @param x2 is X alis, eg: 60
+   * @param y2 is Y alis, eg: 30
+   * @param color is line color, eg: 1
+   */
+  //% blockId="OLED12864_I2C_RECT" block="draw a rectangle at x1 %x1|y1 %y1|x2 %x2|y2 %y2|color %color"
+  //% weight=73 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function rect(
+    x1: number,
+    y1: number,
+    x2: number,
+    y2: number,
+    color: number = 1
+  ) {
+    if (x1 > x2) x1 = [x2, (x2 = x1)][0];
+    if (y1 > y2) y1 = [y2, (y2 = y1)][0];
+    hline(x1, y1, x2 - x1 + 1, color);
+    hline(x1, y2, x2 - x1 + 1, color);
+    vline(x1, y1, y2 - y1 + 1, color);
+    vline(x2, y1, y2 - y1 + 1, color);
+  }
 
-    /**
-     * Draws a pixel at (x, y).
-     * @param x X-coordinate, eg: 0
-     * @param y Y-coordinate, eg: 0
-     * @param color 1 for white, 0 for black, eg: 1
-     */
-    //% blockId="I2C_OLED_PIXEL" block="draw pixel at x %x|y %y|color %color"
-    //% subcategory="I2C OLED"
-    //% weight=85
-    export function drawPixel(x: number, y: number, color: number = 1): void {
-        if (x < 0 || x >= 128 || y < 0 || y >= 64) return; // Check bounds
-        let page = Math.floor(y / 8);
-        let shift = y % 8;
-        let index = x + page * 128 + 1; // Adjust for screen buffer
-        if (color) {
-            _screen[index] |= (1 << shift); // Set pixel
-        } else {
-            _screen[index] &= ~(1 << shift); // Clear pixel
-        }
-    }
+  /**
+   * invert display
+   * @param d true: invert / false: normal, eg: true
+   */
+  //% blockId="OLED12864_I2C_INVERT" block="invert display %d"
+  //% weight=65 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function invert(d: boolean = true) {
+    let n = d ? 0xa7 : 0xa6;
+    cmd1(n);
+  }
 
-    /**
-     * Displays text on the OLED screen.
-     * @param x X-coordinate, eg: 0
-     * @param y Y-coordinate, eg: 0
-     * @param text Text to display, eg: "Hello!"
-     * @param color 1 for white, 0 for black, eg: 1
-     */
-    //% blockId="I2C_OLED_TEXT" block="show text at x %x|y %y|text %text|color %color"
-    //% subcategory="I2C OLED"
-    //% weight=90
-    export function showText(x: number, y: number, text: string, color: number = 1): void {
-        for (let i = 0; i < text.length; i++) {
-            drawChar(x + i * 6, y, text.charCodeAt(i), color);
-        }
-        refresh();
-    }
+  /**
+   * draw / redraw screen
+   */
+  //% blockId="OLED12864_I2C_DRAW" block="draw"
+  //% weight=64 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function draw() {
+    set_pos();
+    pins.i2cWriteBuffer(_I2CAddr, _screen);
+  }
 
-    function drawChar(x: number, y: number, charCode: number, color: number): void {
-        if (charCode < 32 || charCode > 127) return; // Check bounds
-        let index = (charCode - 32) * 5; // Font index
-        for (let i = 0; i < 5; i++) {
-            let line = font[index + i];
-            for (let j = 0; j < 8; j++) {
-                if (line & (1 << j)) {
-                    drawPixel(x + i, y + j, color);
-                }
-            }
-        }
-    }
+  /**
+   * clear screen
+   */
+  //% blockId="OLED12864_I2C_CLEAR" block="clear"
+  //% weight=63 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function clear() {
+    _screen.fill(0);
+    _screen[0] = 0x40;
+    draw();
+  }
 
+  /**
+   * turn on screen
+   */
+  //% blockId="OLED12864_I2C_ON" block="turn on"
+  //% weight=62 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function on() {
+    cmd1(0xaf);
+  }
+
+  /**
+   * turn off screen
+   */
+  //% blockId="OLED12864_I2C_OFF" block="turn off"
+  //% weight=61 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function off() {
+    cmd1(0xae);
+  }
+
+  /**
+   * zoom mode
+   * @param d true zoom / false normal, eg: true
+   */
+  //% blockId="OLED12864_I2C_ZOOM" block="zoom %d"
+  //% weight=60 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function zoom(d: boolean = true) {
+    _ZOOM = d ? 1 : 0;
+    cmd2(0xd6, _ZOOM);
+  }
+  /**
+   * draw an outlined circle
+   * @param x is the x coordinate of the center, eg: 0
+   * @param y is the y coordinate of the center, eg: 0
+   * @param r is the radius of the circle, eg: 10
+   * @param color is the color of the circle, eg: 1
+   */
+  //% blockId="OLED12864_I2C_OUTLINEDCIRCLE"
+  //% block="draw outlined circle at x %x|y %y|radius %r|color %color"
+  //% weight=70 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function outlinedCircle(x: number, y: number, r: number, color: number = 1) {
+      const step = 1 / r;
+      for (let theta = 0; theta < 2 * Math.PI; theta += step) {
+          let xPos = x + Math.round(r * Math.cos(theta));
+          let yPos = y + Math.round(r * Math.sin(theta));
+          pixel(xPos, yPos, color);
+      }
+  }
+  /**
+   * draw a filled circle
+   * @param x is the x coordinate of the center, eg: 0
+   * @param y is the y coordinate of the center, eg: 0
+   * @param r is the radius of the circle, eg: 10
+   * @param color is the color of the circle, eg: 1
+   */
+  //% blockId="OLED12864_I2C_FILLEDCIRCLE"
+  //% block="draw filled circle at x %x|y %y|radius %r|color %color"
+  //% parts=OLED12864_I2C trackArgs=0
+  export function filledCircle(x: number, y: number, r: number, color: number = 1) {
+      for (let j = 0; j <= r; j++) {
+          const step = 1 / j;
+          for (let theta = 0; theta < 2 * Math.PI; theta += step) {
+              let xPos = x + Math.round(j * Math.cos(theta));
+              let yPos = y + Math.round(j * Math.sin(theta));
+              pixel(xPos, yPos, color);
+          }
+      }
+  }
+  /**
+   * OLED initialize
+   * @param addr is i2c addr, eg: 60
+   */
+  //% blockId="OLED12864_I2C_init" block="init OLED with addr %addr"
+  //% weight=100 blockGap=8
+  //% parts=OLED12864_I2C trackArgs=0
+  export function init(addr: number) {
+    _I2CAddr = addr;
+    cmd1(0xae); // SSD1306_DISPLAYOFF
+    cmd1(0xa4); // SSD1306_DISPLAYALLON_RESUME
+    cmd2(0xd5, 0xf0); // SSD1306_SETDISPLAYCLOCKDIV
+    cmd2(0xa8, 0x3f); // SSD1306_SETMULTIPLEX
+    cmd2(0xd3, 0x00); // SSD1306_SETDISPLAYOFFSET
+    cmd1(0 | 0x0); // line #SSD1306_SETSTARTLINE
+    cmd2(0x8d, 0x14); // SSD1306_CHARGEPUMP
+    cmd2(0x20, 0x00); // SSD1306_MEMORYMODE
+    cmd3(0x21, 0, 127); // SSD1306_COLUMNADDR
+    cmd3(0x22, 0, 63); // SSD1306_PAGEADDR
+    cmd1(0xa0 | 0x1); // SSD1306_SEGREMAP
+    cmd1(0xc8); // SSD1306_COMSCANDEC
+    cmd2(0xda, 0x12); // SSD1306_SETCOMPINS
+    cmd2(0x81, 0xcf); // SSD1306_SETCONTRAST
+    cmd2(0xd9, 0xf1); // SSD1306_SETPRECHARGE
+    cmd2(0xdb, 0x40); // SSD1306_SETVCOMDETECT
+    cmd1(0xa6); // SSD1306_NORMALDISPLAY
+    cmd2(0xd6, 1); // zoom on
+    cmd1(0xaf); // SSD1306_DISPLAYON
+    clear();
+    _ZOOM = 1;
+  }
 }
