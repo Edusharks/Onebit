@@ -901,6 +901,7 @@ namespace OLED12864_I2C {
          * @param color is dot color, eg: 1
          */
         //% blockId="OLED12864_I2C_PIXEL" block="set pixel at x %x|y %y|color %color"
+        //% subcategory="OLED"
         //% weight=70 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
         function pixel(x: number, y: number, color: number = 1) {
@@ -932,6 +933,7 @@ namespace OLED12864_I2C {
          * @param color is string color, eg: 1
          */
         //% blockId="OLED12864_I2C_SHOWSTRING" block="show string at x %x|y %y|text %s|color %color"
+        //% subcategory="OLED"
         //% weight=80 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function showString(
@@ -971,6 +973,7 @@ namespace OLED12864_I2C {
          * @param color is number color, eg: 1
          */
         //% blockId="OLED12864_I2C_NUMBER" block="show a Number at x %x|y %y|number %num|color %color"
+        //% subcategory="OLED"
         //% weight=80 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function showNumber(
@@ -990,6 +993,7 @@ namespace OLED12864_I2C {
          * @param color is line color, eg: 1
          */
         //% blockId="OLED12864_I2C_HLINE" block="draw a horizontal line at x %x|y %y|number %len|color %color"
+        //% subcategory="OLED"
         //% weight=71 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function hline(x: number, y: number, len: number, color: number = 1) {
@@ -1004,6 +1008,7 @@ namespace OLED12864_I2C {
          * @param color is line color, eg: 1
          */
         //% blockId="OLED12864_I2C_VLINE" block="draw a vertical line at x %x|y %y|number %len|color %color"
+        //% subcategory="OLED"
         //% weight=72 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function vline(x: number, y: number, len: number, color: number = 1) {
@@ -1019,6 +1024,7 @@ namespace OLED12864_I2C {
          * @param color is line color, eg: 1
          */
         //% blockId="OLED12864_I2C_RECT" block="draw a rectangle at x1 %x1|y1 %y1|x2 %x2|y2 %y2|color %color"
+        //% subcategory="OLED"
         //% weight=73 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
         function rect(
@@ -1041,6 +1047,7 @@ namespace OLED12864_I2C {
          * @param d true: invert / false: normal, eg: true
          */
         //% blockId="OLED12864_I2C_INVERT" block="invert display %d"
+        //% subcategory="OLED"
         //% weight=65 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function invert(d: boolean = true) {
@@ -1053,6 +1060,7 @@ namespace OLED12864_I2C {
          */
         //% blockId="OLED12864_I2C_DRAW" block="draw"
         //% weight=64 blockGap=8
+        //% subcategory="OLED"
         //% parts=OLED12864_I2C trackArgs=0
          function draw() {
             set_pos();
@@ -1063,6 +1071,7 @@ namespace OLED12864_I2C {
          * clear screen
          */
         //% blockId="OLED12864_I2C_CLEAR" block="clear"
+        //% subcategory="OLED"
         //% weight=63 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function clear() {
@@ -1075,6 +1084,7 @@ namespace OLED12864_I2C {
          * turn on screen
          */
         //% blockId="OLED12864_I2C_ON" block="turn on"
+        //% subcategory="OLED"
         //% weight=62 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function on() {
@@ -1085,6 +1095,7 @@ namespace OLED12864_I2C {
          * turn off screen
          */
         //% blockId="OLED12864_I2C_OFF" block="turn off"
+        //% subcategory="OLED"
         //% weight=61 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function off() {
@@ -1096,6 +1107,7 @@ namespace OLED12864_I2C {
          * @param d true zoom / false normal, eg: true
          */
         //% blockId="OLED12864_I2C_ZOOM" block="zoom %d"
+        //% subcategory="OLED"
         //% weight=60 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function zoom(d: boolean = true) {
@@ -1111,6 +1123,7 @@ namespace OLED12864_I2C {
          */
         //% blockId="OLED12864_I2C_OUTLINEDCIRCLE"
         //% block="draw outlined circle at x %x|y %y|radius %r|color %color"
+        //% subcategory="OLED"
         //% weight=70 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function outlinedCircle(x: number, y: number, r: number, color: number = 1) {
@@ -1130,6 +1143,7 @@ namespace OLED12864_I2C {
          */
         //% blockId="OLED12864_I2C_FILLEDCIRCLE"
         //% block="draw filled circle at x %x|y %y|radius %r|color %color"
+        //% subcategory="OLED"
         //% parts=OLED12864_I2C trackArgs=0
          function filledCircle(x: number, y: number, r: number, color: number = 1) {
             for (let j = 0; j <= r; j++) {
@@ -1146,6 +1160,7 @@ namespace OLED12864_I2C {
          * @param addr is i2c addr, eg: 60
          */
         //% blockId="OLED12864_I2C_init" block="init OLED with addr %addr"
+        //% subcategory="OLED"
         //% weight=100 blockGap=8
         //% parts=OLED12864_I2C trackArgs=0
          function init(addr: number) {
