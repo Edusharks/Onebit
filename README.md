@@ -1,25 +1,22 @@
+# One:Bit Extension
 
-> Open this page at [https://edusharks.github.io/onebit/](https://edusharks.github.io/onebit/)
+This is the One:Bit extension for the **micro:bit**. It supports **Prime**, **Rainbow**, **sensors**, and **actuators**, providing a set of custom blocks for the micro:bit platform.
 
-## Use as Extension
+## How to Add to MakeCode
 
-This repository can be added as an **extension** in MakeCode.
+1. Open [MakeCode for micro:bit](https://makecode.microbit.org/).
+2. Create a **New Project**.
+3. Click on the **gear icon** in the top-right corner and select **Extensions**.
+4. In the search bar, paste or search for the following URL:
+    - `https://github.com/edusharks/onebit`
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/edusharks/onebit** and import
+You can now use One:Bit blocks in your project!
 
-## Edit this project
+## Metadata (for PXT/microbit)
 
-To edit this repository in MakeCode.
+MakeCode uses metadata from `README.md` to index extensions. This helps your extension show up in search results.
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/edusharks/onebit** and click import
-
-#### Metadata (used for search, rendering)
-
-* for PXT/microbit
+```html
+<!-- for PXT/microbit -->
 <script src="https://makecode.com/gh-pages-embed.js"></script>
-<script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+<script>makeCodeRender("https://makecode.microbit.org", "edusharks/onebit");</script>
